@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+}
+
+.dashboard-container{
+    width:1000px;
+    margin-top: 3rem;
+    min-height: 500px;
+    top: 50px;
+    max-height: calc(100vh - 40px);
+    padding: 40px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+}
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: #2575fc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #6a11cb;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.expense-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.expense-form input{
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #2575fc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.expense-form input:focus {
+    border-color: #6a11cb;
+    background-color: #eaeaea;
+}
+.expense-form button{
+    width: 100%;
+    background-color: #05b61a;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.expense-form button:hover{
+    background-color: #026d0b;
+    transition: 0.5s ease;
+}
+
+.container-bottom{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+}
+
+.clear-button{
+    background-color: #0b5a8c;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.clear-button:hover{
+    background-color: #3f9dc5;
+}
+
+/* MEDIA QUERIES */
+/* 1) Mobile Devices */
+@media only screen and (max-width: 480px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .dashboard-container{
+        width: 90%;
+        padding: 20px;
+        margin: 0 auto;
+        max-height: auto;
+        min-height: 400px;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .table-container{
+        padding: 10px;
+        max-height: 300px;
+    }
+    .clear-button{
+        font-size: 0.8em;
+        padding: 12px;
+    }
+    .expense-form input,
+    .expense-form button{
+        font-size: rem;
+        padding: 12px;
+    }
+    .container-bottom{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+}
+
+/* 2) Large Phones and Tablets */
+@media only screen and (max-width: 768px){
+    .dashboard-container{
+        width: 90%;
+        margin-top: 3rem;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .table-container{
+        max-height: 350px;
+    }
+    .clear-button{
+        font-size: 1rem;
+        padding: 12px;
+    }
+    .expense-form input{
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+    .expense-form button{
+        font-size: 1rem;
+    }
+    .container-bottom{
+        gap: 10px;
+    }
+}
+
+/* 3) Desktop Screens and PC */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .dashboard-container{
+        width: 80%;
+        max-width: 800px;
+        margin-top: 3rem;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .table-container{
+        max-height: 400px;
+    }
+    .clear-button{
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+    .expense-form input{
+        font-size: 1.2rem;
+        padding: 14px;
+    }
+    .expense-form button{
+        font-size: 1.2rem;
+        padding: 14px;
+    }
+    .container-bottom{
+        gap: 15px;
+    }
+}

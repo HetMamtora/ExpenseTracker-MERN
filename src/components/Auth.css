@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(145deg, #0f2027, #203a43, #2c5364);
+}
+
+.auth-container{
+    width: 100%;
+    max-width: 450px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    padding: 40px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0,95;
+}
+
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-heading{
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+input{
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #2575fc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, background-color 0.3 ease-in-out;
+    color: #333;
+}
+input:focus {
+    border-color: #6a11cb;
+    background-color: #eaeaea;
+    transition: 0.3s ease-in-out;
+}
+
+button{
+    width: 100%;
+    height: 3rem;
+    padding: 12px;
+    background-color: #2575fc;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+button:hover{
+    background-color: #6a11cb;
+    transition: 0.5s ease;
+}
+
+.toggle-link{
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    
+    text-align: center;
+}
+
+.fade-left{
+    animation: fadeInLeft 0.5s ease-in-out forwards;
+}
+@keyframes fadeInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-right{
+    animation: fadeInRight 0.5s ease-in-out forwards;
+}
+@keyframes fadeInRight{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*MEDIA QUERIES*/
+/* 1) Mobile Devices */
+@media only screen and (max-width: 480px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .auth-container{
+        width: 90%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    .auth-heading{
+        font-size: 1.8rem;
+    }
+    input{
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    button{
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    .toggle-link{
+        font-size: 0.9rem;
+    }
+}
+
+/* 2) Large Phones and Tablets */
+@media only screen and (max-width: 768px){
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .auth-container{
+        width: 85%;
+        padding: 30px;
+        margin: 0 auto;
+    }
+    .auth-heading{
+        font-size: 2.2rem;
+    }
+    input{
+        padding: 13px;
+        font-size: 1rem;
+    }
+    button{
+        height: 2.8rem;
+        font-size: 1.1rem;
+    }
+    .toggle-link{
+        font-size: 1rem;
+    }
+}
+
+/* 3) Desktop Screens and PC */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .auth-container{
+        width: 70%;
+        padding: 40px;
+        margin: 0 auto;
+    }
+    .auth-heading{
+        font-size: 2.5rem;
+    }
+    input{
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+    button{
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+    .toggle-link{
+        font-size: 1.1rem;
+    }
+}

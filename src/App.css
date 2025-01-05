@@ -1,0 +1,202 @@
+body{
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.bottom-credits {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.credits {
+  font-size: 1rem;
+}
+
+.credits a {
+  color: #2575fc;
+  text-decoration: none;
+}
+
+.credits a:hover {
+  text-decoration: underline;
+}
+
+.main-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #f5f6f8;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 70px;
+  text-align: center;
+  z-index: 10;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.animated-background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.icon{
+  position: absolute;
+  width: 60px;
+  top: -10vh;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  font-size: 20px;
+  animation: moveIcons 15s linear infinite;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon:nth-child(1){
+  left: 8%;
+  animation-delay: 0s;
+  color: rgb(1, 143, 1);
+}
+.icon:nth-child(2){
+  left: 23%;
+  animation-delay: 6s;
+  color: rgb(255, 215, 0);
+}
+.icon:nth-child(3){
+  left: 39.8%;
+  animation-delay: 4s;
+  color: rgb(255, 165, 0);
+}
+.icon:nth-child(4){
+  left: 56.6%;
+  animation-delay: 8s;
+  color: rgb(208, 67, 208);
+}
+.icon:nth-child(5){
+  left: 73.4%;
+  animation-delay: 2s;
+  color: rgb(127, 255, 212);
+}
+.icon:nth-child(6){
+  left: 90%;
+  animation-delay: 10s;
+  color: rgb(146, 238, 26);
+}
+
+
+@keyframes moveIcons{
+  0%{
+    transform: translateY(110vh) rotate(0deg);
+    opacity: 0;
+  }
+  20%{
+    opacity: 1;
+  }
+  40%{
+    opacity: 1.5;
+  }
+  60%{
+    opacity: 2;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/*MEDIA QUERIES*/
+/* 1) Mobile Devices */
+@media only screen and (max-width: 480px){
+  .main-title{
+    font-size: 2.5rem;
+    top: 5%;
+  }
+  .icon{
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    top: -5vh;
+  }
+  .icon:nth-child(1), .icon:nth-child(2),
+  .icon:nth-child(3), .icon:nth-child(4),
+  .icon:nth-child(5), .icon:nth-child(6){
+    animation-duration: 20s;
+  }
+  .bottom-credits{
+    font-size: 0.8rem;
+  }
+}
+
+/* 2) Large Phones and Tablets */
+@media only screen and (max-width: 768px){
+  .main-title{
+    font-size: 3rem;
+    top: 7%;  
+  }
+  .icon{
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+    top: -8vh;
+  }
+
+  .icon:nth-child(1), .icon:nth-child(2),
+  .icon:nth-child(3), .icon:nth-child(4),
+  .icon:nth-child(5), .icon:nth-child(6){
+    animation-duration: 18s;
+  }
+
+  .bottom-credits{
+    font-size: 0.9rem;
+  }
+}
+
+/*3) Desktop Screen and PC*/
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .main-title {
+    font-size: 3.5rem;
+    top: 8%;
+  }
+
+  .icon {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    top: -10vh;
+  }
+
+  .icon:nth-child(1), .icon:nth-child(2),
+  .icon:nth-child(3), .icon:nth-child(4),
+  .icon:nth-child(5), .icon:nth-child(6) {
+    animation-duration: 15s;
+  }
+
+  .bottom-credits {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,129 @@
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: transparent;
+    box-shadow: 0 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+table tr th{
+    background-color: #2575fc;
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+table tr{
+    transition: background-color 0.2s ease;
+    background-color: #fbf9f9;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+
+tbody tr:hover{
+    background-color: #e0e0e0;
+}
+tbody tr:last-child{
+    background-color: #f5a802;
+    font-weight: 600;
+}
+
+tbody td{
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.action-buttons{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    font-size: 1.5rem;
+    padding-right: 1rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+/* 1) Mobile Devices */
+@media only screen and (max-width: 480px){
+    table{
+        width: 100%;
+        margin-top: 5px;
+        font-size: 0.8rem;
+        border: none;
+    }
+    table tr th{
+        padding: 6px;
+        font-size: 0.6rem;
+    }
+    table tr{
+        font-size: 0.85rem;
+    }
+    tbody td{
+        padding: 6px;
+        font-size: 0.85rem;
+    }
+    .action-buttons{
+        font-size: 1rem;
+        padding-right: 0.3rem;
+    }
+}
+
+/* 2) Large Phones and Tablets */
+@media only screen and (max-width: 768px){
+    table{
+        width: 100%;
+        margin-top: 8px;
+        font-size: 0.95rem;
+        border: none;
+    }
+    table tr th{
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+    table tr{
+        font-size: 0.95rem;
+    }
+    tbody td{
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+    .action-buttons{
+        font-size: 1rem;
+        padding-right: 0.5rem;
+    }
+}
+
+/* 3) Desktop Screens and PC */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    table{
+        width: 100%;
+        margin-top: 10px;
+        font-size: 1rem;
+        border: none;
+    }
+    table tr th{
+        padding: 10px;
+        font-size: 0.9rem;
+        text-align: left;
+    }
+    table tr{
+        font-size: 1rem;
+    }
+    tbody td{
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+    .action-buttons{
+        font-size: 1.1rem;
+        padding-right: 0.6rem;
+    }
+}
